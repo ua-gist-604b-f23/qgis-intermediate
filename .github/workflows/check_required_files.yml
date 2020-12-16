@@ -1,0 +1,72 @@
+name: Check for required files
+
+on:
+  push:
+    branches: [ assignment ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check 1 files
+        id: check_1_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap-nyc-boro.png"
+          key:  
+
+      - name: Required files exist
+        if: steps.check_1_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap-tmax_mean_table.png', is missing
+          exit 1
+          
+      - name: Check 2 files
+        id: check_2_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap-tmax_mean_table.png"
+
+      - name: Required files exist
+        if: steps.check_2_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap-lake-depth.png', is missing
+          exit 1
+          
+      - name: Check 3 files
+        id: check_3_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap-lake-depth.png"
+
+      - name: Required files exist
+        if: steps.check_3_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap-powerplants.png', is missing
+          exit 1
+          
+      - name: Check 4 files
+        id: check_4_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_police_hostpot.png"
+
+      - name: Required files exist
+        if: steps.check_4_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_police_hostpot.png', is missing
+          exit 1
+          
+      - name: Check 5 files
+        id: check_5_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap-shortest-path.png"
+
+      - name: Required files exist
+        if: steps.check_5_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap-shortest-path.png', is missing
+          exit 1
