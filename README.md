@@ -8,7 +8,7 @@ Pull request to merge a new branch named `assignment` with `master`. Your branch
 1. `screencap-nyc-boro.png`
 2. `screencap-tmax_mean_table.png`
 3. `screencap-lake-depth.png`
-4. `screencap_police_hostpot.png`
+4. `screencap_heatmap.png`
 5. `screencap-shortest-path.png`
 
 ## Assignment
@@ -37,7 +37,7 @@ Take a screenshot of your from your final step (step 20) and name it `screencap-
 ### 4. Follow the tutorial at http://www.qgistutorials.com/en/docs/3/creating_heatmaps.html.
 Deliverable:
 
-From step 24, create a screenshot showing the heatmap. Save the screenshot to a file named `screencap_hostpot.png` in the `intermediate` branch of this repo.
+From step 24, create a screenshot showing the heatmap. Save the screenshot to a file named `screencap_heatmap.png` in the `intermediate` branch of this repo.
 
 ### 5. Follow the tutorial at http://www.qgistutorials.com/en/docs/3/basic_network_analysis.html
 
