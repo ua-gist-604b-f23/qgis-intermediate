@@ -27,12 +27,12 @@ jobs:
         id: check_2_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-tmax_mean_table.png"
+          files: "screencap-tmax-mean-table.png"
 
       - name: Required files exist
         if: steps.check_2_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-tmax_mean_table.png', is missing
+          echo Required file, 'screencap-tmax-mean-table.png', is missing
           exit 1
           
       - name: Check 3 files
@@ -51,12 +51,12 @@ jobs:
         id: check_4_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap_heatmap.png"
+          files: "screencap-heatmap.png"
 
       - name: Required files exist
         if: steps.check_4_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap_heatmap.png', is missing
+          echo Required file, 'screencap-heatmap.png', is missing
           exit 1
           
       - name: Check 5 files
