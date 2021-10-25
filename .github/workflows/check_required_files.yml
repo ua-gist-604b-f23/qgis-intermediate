@@ -20,7 +20,7 @@ jobs:
       - name: Required files exist
         if: steps.check_1_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-tmax_mean_table.png', is missing
+          echo Required file, 'screencap-nyc-boro.png', is missing
           exit 1
           
       - name: Check 2 files
@@ -32,7 +32,7 @@ jobs:
       - name: Required files exist
         if: steps.check_2_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-lake-depth.png', is missing
+          echo Required file, 'screencap-tmax_mean_table.png', is missing
           exit 1
           
       - name: Check 3 files
@@ -44,7 +44,7 @@ jobs:
       - name: Required files exist
         if: steps.check_3_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-powerplants.png', is missing
+          echo Required file, 'screencap-lake-depth.png', is missing
           exit 1
           
       - name: Check 4 files
