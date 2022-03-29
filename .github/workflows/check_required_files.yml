@@ -10,63 +10,63 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check 1 files
+      - name: Check screencap_nyc_boro.png
         id: check_1_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-nyc-boro.png"
+          files: "screencap_nyc_boro.png"
           key:  
 
       - name: Required files exist
         if: steps.check_1_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-nyc-boro.png', is missing
+          echo Required file, 'screencap_nyc_boro.png', is missing
           exit 1
           
-      - name: Check 2 files
+      - name: Check screencap_tmax_mean_table.png
         id: check_2_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-tmax-mean-table.png"
+          files: "screencap_tmax_mean_table.png"
 
       - name: Required files exist
         if: steps.check_2_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-tmax-mean-table.png', is missing
+          echo Required file, 'screencap_tmax_mean_table.png', is missing
           exit 1
           
-      - name: Check 3 files
+      - name: Check screencap_lake_depth.png
         id: check_3_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-lake-depth.png"
+          files: "screencap_lake_depth.png"
 
       - name: Required files exist
         if: steps.check_3_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-lake-depth.png', is missing
+          echo Required file, 'screencap_lake_depth.png', is missing
           exit 1
           
-      - name: Check 4 files
+      - name: Check screencap_heatmap.png
         id: check_4_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-heatmap.png"
+          files: "screencap_heatmap.png"
 
       - name: Required files exist
         if: steps.check_4_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-heatmap.png', is missing
+          echo Required file, 'screencap_heatmap.png', is missing
           exit 1
           
-      - name: Check 5 files
+      - name: Check screencap_shortest_path.png
         id: check_5_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "screencap-shortest-path.png"
+          files: "screencap_shortest_path.png"
 
       - name: Required files exist
         if: steps.check_5_files.outputs.files_exists != 'true'
         run: |
-          echo Required file, 'screencap-shortest-path.png', is missing
+          echo Required file, 'screencap_shortest_path.png', is missing
           exit 1
